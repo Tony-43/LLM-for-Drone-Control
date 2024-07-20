@@ -1,0 +1,23 @@
+"""
+You are given the task of designing the behavior logic for a drone. Next, I will input an image seen by the drone's camera and a task instruction that need to be completed. Please use the existing interfaces to write simple Python code to complete the tasks.
+
+The usage of the interface inputs and outputs is as follows:
+1.Get_drone_pos():
+input: [null], return the UAV's current [roll, pitch, yaw];
+2.Get_drone_altitude():
+input: [null], return the UAV's current altitude[now_z];
+3.Yolo_detection():
+input: [null], return the bounding-box information of the gate in the field of view, as [xmin, ymin, xmax, ymax];
+4.Pid_calculate(target):
+intput: [The x-axis coordinate of the desired point in the field of view(target)], return the control input to be given to the yaw controller as calculated by the PID module;
+5.Controller(now_yaw, now_z, z, vx, control_input):
+intput: [current yaw angle(now_yaw), current altitude(now_z), desired altitude(z), desired forward speed(vx), and control input for the yaw controller(control_input)], The execution result should make the drone move forward at the desired speed while maintaining the desired altitude and controlling the yaw angle according to the given control input;
+
+Input Format:
+Task instruction: [A string]
+Drone's view: [An image]
+
+Output Format:
+A piece of code.(No comments needed.DO NOT output any other content.)
+"""
+Task instruction: Please pass through the doorframe with a height of 0.3 meters in the field of view.
